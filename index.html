@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./public/style/style.css">
+</head>
+<body>
+    <div class="player-container">
+        <div class="header">
+            <h4>Playing <span data-currentTrack>1</span> of <span data-lastTrack>10</span></h4>
+        </div>
+        <div class="track-wallpaper-container">
+            <div class="track-wallpaper">
+
+            </div>
+        </div>
+        <div class="track-name">
+            <h3>Track Name</h3>
+            <p>Track Artist</p>
+        </div>
+        <div class="buttons">
+            <div><img src="./public/img/icons8-begin-50.png" alt="backward" data-backward draggable="false"></div>
+            <div><img src="./public/img/icons8-play50.png" alt="pause/resume"data-play draggable="false"></div>
+            <div><img src="./public/img/icons8-end50.png" alt="forward" data-forward draggable="false"></div>
+        </div>
+        <div class="time-bar">
+            <p class="current-time"><span data-minutes>0</span> : <span data-seconds>00</span></p>
+            <div class="bar"><input type="range" value="0" step="1" data-trackBar></div>
+            <p class="current-time"><span data-totalMinutes>0</span> : <span data-totalSeconds>  00</span></p>
+        </div>
+        <div class="volume-bar">
+            <div><img src="./public/img/icons8-low-volume-50.png" alt="lower-volume" draggable="false"></div>
+            <div class="bar"> <input type="range" value="20" max="100" min="0" step="1" data-volume></div>
+            <div><img src="./public/img/icons8-loud-sound50.png" alt="upper-volume" draggable="false"></div>
+        </div>
+    </div>
+
+    <div>
+        <audio id="player"></audio>
+    </div>
+    
+</body>
+</html> 
